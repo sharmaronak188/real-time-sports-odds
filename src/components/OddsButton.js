@@ -1,7 +1,7 @@
 const OddsButton = ({ label, odds, trend, onClick, isHot }) => (
   <button
     onClick={onClick}
-    className={`flex bg-gray-100 flex-row items-center justify-between p-2 rounded-lg border transition-all duration-200 hover:bg-gray-100 active:scale-95 ${
+    className={`flex bg-gray-100 flex-row items-center justify-between p-2 rounded-lg border transition-all duration-200 active:scale-95 ${
       trend === "up"
         ? "bg-green-50 border-green-200"
         : trend === "down"
