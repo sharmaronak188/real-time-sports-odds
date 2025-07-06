@@ -1,0 +1,79 @@
+{
+  "matches": [
+    {
+      "id": 1,
+      "time": "10:30 Fri 04/07",
+      "homeTeam": "Green Gully SC",
+      "awayTeam": "Melbourne Victory YOUTH",
+      "league": "Football / Australia / Victoria NPL1",
+      "odds": {
+        "home": 1.58,
+        "draw": 4.2,
+        "away": 4.6
+      },
+      "totalMatches": 52,
+      "trends": {
+        "home": "neutral",
+        "draw": "neutral",
+        "away": "neutral"
+      }
+    },
+    {
+      "id": 2,
+      "time": "10:30 Fri 04/07",
+      "homeTeam": "Eastern Lions SC",
+      "awayTeam": "FC Melbourne Srbija",
+      "league": "Football / Australia / NPL2, Victoria",
+      "odds": {
+        "home": 3.3,
+        "draw": 4.2,
+        "away": 1.82
+      },
+      "totalMatches": 35,
+      "isHot": true,
+      "trends": {
+        "home": "neutral",
+        "draw": "neutral",
+        "away": "neutral"
+      }
+    },
+    {
+      "id": 3,
+      "time": "10:30 Fri 04/07",
+      "homeTeam": "Sydney FC Youth YOUTH",
+      "awayTeam": "Sydney Olympic",
+      "league": "Football / Australia / NSW NPL 1",
+      "odds": {
+        "home": 2.8,
+        "draw": 3.9,
+        "away": 2.1
+      },
+      "totalMatches": 53,
+      "trends": {
+        "home": "neutral",
+        "draw": "neutral",
+        "away": "neutral"
+      }
+    },
+    {
+      "id": 4,
+      "time": "10:30 Fri 04/07",
+      "homeTeam": "Northcote City",
+      "awayTeam": "Caroline Springs George Cross FC",
+      "league": "Football / Australia / NPL1",
+      "odds": {
+        "home": 3.85,
+        "draw": 4.6,
+        "away": 1.63
+      },
+      "totalMatches": 36,
+      "trends": {
+        "home": "neutral",
+        "draw": "neutral",
+        "away": "neutral"
+      }
+    }
+  ],
+  "lastUpdated": "2024-07-04T10:00:00Z",
+  "version": "1.0"
+}

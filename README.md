@@ -1,70 +1,234 @@
-# Getting Started with Create React App
+# Real-Time Sports Odds
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application for displaying real-time sports betting odds with a mobile-first design. The app features a clean, responsive interface for viewing football matches, odds, and betting information.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Real-time Sports Data**: Displays live sports events and betting odds
+- **Mobile-First Design**: Optimized for mobile devices with responsive layout
+- **Modern UI**: Clean interface with Tailwind CSS styling
+- **Redux State Management**: Efficient state management with Redux Toolkit
+- **Font Awesome Icons**: Professional icons for navigation and UI elements
+- **Loading States**: Smooth loading indicators and error handling
+- **Match Cards**: Detailed match information with teams, leagues, and odds
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19.1.0
+- **State Management**: Redux Toolkit 2.8.2
+- **Styling**: Tailwind CSS 4.1.11
+- **Icons**: Font Awesome 6.7.2 & Lucide React 0.525.0
+- **Testing**: Jest & React Testing Library
+- **Build Tool**: Create React App 5.0.1
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Prerequisites
 
-### `npm test`
+Before running this project, make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Node.js** (version 16.0 or higher)
+- **npm** (version 8.0 or higher) or **yarn**
 
-### `npm run build`
+You can check your versions by running:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+node --version
+npm --version
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the Repository
 
-### `npm run eject`
+```bash
+git clone <repository-url>
+cd real-time-sports-odds
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Using npm:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Or using yarn:
 
-## Learn More
+```bash
+yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Start the Development Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Using npm:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Or using yarn:
 
-### Analyzing the Bundle Size
+```bash
+yarn start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application will open automatically in your browser at [http://localhost:3000](http://localhost:3000).
 
-### Making a Progressive Web App
+## 📱 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **View Matches**: The main screen displays a list of football matches with current odds
+2. **Match Information**: Each match card shows:
+   - Match date and time
+   - Home vs Away teams
+   - League information
+   - Betting odds (1/X/2)
+   - Hot matches indicator (🔥)
+   - Number of bets placed
+3. **Navigation**: Use the bottom navigation bar to access different sections
 
-### Advanced Configuration
+## 🏗️ Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Development
 
-### Deployment
+- **`npm start`** - Runs the app in development mode with hot reloading
+- **`npm test`** - Launches the test runner in interactive watch mode
+- **`npm run test:coverage`** - Runs tests with coverage report
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Production
 
-### `npm run build` fails to minify
+- **`npm run build`** - Builds the app for production to the `build` folder
+- **`npm run serve`** - Serves the production build locally (requires `serve` package)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Code Quality
+
+- **`npm run lint`** - Runs ESLint to check code quality
+- **`npm run lint:fix`** - Automatically fixes ESLint issues where possible
+
+## 📁 Project Structure
+
+```
+real-time-sports-odds/
+├── public/
+│   ├── data/              # Static data files
+│   ├── favicon.ico        # App favicon
+│   ├── index.html         # HTML template
+│   └── manifest.json      # PWA manifest
+├── src/
+│   ├── components/        # Reusable React components
+│   ├── services/          # API services and data fetching
+│   ├── store/             # Redux store and slices
+│   ├── utils/             # Utility functions
+│   ├── App.js             # Main App component
+│   ├── App.css            # App-specific styles
+│   ├── index.js           # App entry point
+│   └── index.css          # Global styles
+├── package.json           # Dependencies and scripts
+├── tailwind.config.js     # Tailwind CSS configuration
+└── README.md              # This file
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory for environment-specific configurations:
+
+```env
+REACT_APP_API_URL=https://your-api-endpoint.com
+REACT_APP_REFRESH_INTERVAL=30000
+```
+
+### Tailwind CSS
+
+The project uses Tailwind CSS for styling. Configuration can be modified in `tailwind.config.js`.
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+Run tests with coverage:
+
+```bash
+npm test -- --coverage --watchAll=false
+```
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates a `build` folder with optimized production files.
+
+### Deploy to Netlify
+
+1. Build the project: `npm run build`
+2. Drag and drop the `build` folder to Netlify
+3. Or connect your Git repository for automatic deployments
+
+### Deploy to Vercel
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the prompts to deploy
+
+## 🔍 Troubleshooting
+
+### Common Issues
+
+1. **Port 3000 already in use**
+
+   ```bash
+   # Kill the process using port 3000
+   npx kill-port 3000
+   # Or start on a different port
+   PORT=3001 npm start
+   ```
+
+2. **Node modules issues**
+
+   ```bash
+   # Clear npm cache and reinstall
+   rm -rf node_modules package-lock.json
+   npm install
+   ```
+
+3. **Build fails**
+   ```bash
+   # Clear build cache
+   rm -rf build
+   npm run build
+   ```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🆘 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Troubleshooting](#-troubleshooting) section
+2. Search existing issues in the repository
+3. Create a new issue with detailed information about the problem
+
+## 🔗 Links
+
+- [React Documentation](https://reactjs.org/)
+- [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/)
+- [Create React App Documentation](https://create-react-app.dev/)
