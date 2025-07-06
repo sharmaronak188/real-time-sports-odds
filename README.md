@@ -131,12 +131,52 @@ real-time-sports-odds/
 
 ### Environment Variables
 
-Create a `.env` file in the root directory for environment-specific configurations:
+The application uses environment variables for configuration. A `.env.example` file is provided with all available options.
 
-```env
-REACT_APP_API_URL=https://your-api-endpoint.com
-REACT_APP_REFRESH_INTERVAL=30000
-```
+#### Setup Environment Variables
+
+1. **Copy the example file**:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Configure your variables** in `.env`:
+
+   ```env
+   # API Configuration
+   REACT_APP_API_URL=https://gist.githubusercontent.com/kundan-iguru/94d1b58ca3d16376fda4bd7a0689a662/raw/events.json
+   REACT_APP_API_TIMEOUT=10000
+   REACT_APP_API_RETRY_ATTEMPTS=3
+   REACT_APP_API_RETRY_DELAY=1000
+
+   # Application Configuration
+   REACT_APP_REFRESH_INTERVAL=30000
+   REACT_APP_APP_NAME=Real-Time Sports Odds
+   REACT_APP_VERSION=0.1.0
+
+   # Feature Flags
+   REACT_APP_ENABLE_HOT_MATCHES=true
+   REACT_APP_ENABLE_LIVE_UPDATES=true
+   REACT_APP_ENABLE_NOTIFICATIONS=false
+   ```
+
+#### Available Environment Variables
+
+| Variable                        | Description                | Default          | Required |
+| ------------------------------- | -------------------------- | ---------------- | -------- |
+| `REACT_APP_API_URL`             | Sports events API endpoint | See .env.example | Yes      |
+| `REACT_APP_API_TIMEOUT`         | API request timeout (ms)   | 10000            | No       |
+| `REACT_APP_API_RETRY_ATTEMPTS`  | Number of retry attempts   | 3                | No       |
+| `REACT_APP_API_RETRY_DELAY`     | Delay between retries (ms) | 1000             | No       |
+| `REACT_APP_REFRESH_INTERVAL`    | Data refresh interval (ms) | 30000            | No       |
+| `REACT_APP_ENABLE_HOT_MATCHES`  | Show hot matches indicator | true             | No       |
+| `REACT_APP_ENABLE_LIVE_UPDATES` | Enable live data updates   | true             | No       |
+| `REACT_APP_DEBUG`               | Enable debug mode          | false            | No       |
+
+#### Deployment Environment Variables
+
+When deploying to platforms like Vercel or Netlify, make sure to set these environment variables in your deployment platform's dashboard.
 
 ### Tailwind CSS
 
@@ -158,6 +198,34 @@ npm test -- --coverage --watchAll=false
 
 ## 🚀 Deployment
 
+### GitHub Repository Setup
+
+1. **Create GitHub Repository**:
+
+   - Go to [GitHub.com](https://github.com) and create a new repository
+   - Name it `real-time-sports-odds`
+   - Don't initialize with README (we already have one)
+
+2. **Push to GitHub**:
+
+   ```bash
+   # Replace YOUR_USERNAME with your GitHub username
+   git remote add origin https://github.com/YOUR_USERNAME/real-time-sports-odds.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+   Or use the provided deployment script:
+
+   ```bash
+   # On Windows
+   deploy-to-github.bat YOUR_USERNAME
+
+   # On Mac/Linux
+   chmod +x deploy-to-github.sh
+   ./deploy-to-github.sh YOUR_USERNAME
+   ```
+
 ### Build for Production
 
 ```bash
@@ -166,17 +234,65 @@ npm run build
 
 This creates a `build` folder with optimized production files.
 
+### Deploy to Vercel (Recommended)
+
+1. **Connect GitHub Repository**:
+
+   - Go to [Vercel.com](https://vercel.com)
+   - Sign in with GitHub
+   - Import your `real-time-sports-odds` repository
+
+2. **Configure Environment Variables**:
+
+   - In Vercel dashboard, go to Settings → Environment Variables
+   - Add variables from your `.env.example` file
+   - Set `REACT_APP_API_URL` and other required variables
+
+3. **Deploy**:
+   - Vercel will automatically deploy on every push to main branch
+   - Your app will be available at `https://your-app-name.vercel.app`
+
 ### Deploy to Netlify
 
-1. Build the project: `npm run build`
-2. Drag and drop the `build` folder to Netlify
-3. Or connect your Git repository for automatic deployments
+1. **Connect GitHub Repository**:
 
-### Deploy to Vercel
+   - Go to [Netlify.com](https://netlify.com)
+   - Click "New site from Git"
+   - Connect your GitHub repository
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-3. Follow the prompts to deploy
+2. **Build Settings**:
+
+   - Build command: `npm run build`
+   - Publish directory: `build`
+
+3. **Environment Variables**:
+   - Go to Site settings → Environment variables
+   - Add variables from your `.env.example` file
+
+### Deploy to GitHub Pages
+
+1. **Install gh-pages**:
+
+   ```bash
+   npm install --save-dev gh-pages
+   ```
+
+2. **Add to package.json**:
+
+   ```json
+   {
+     "homepage": "https://YOUR_USERNAME.github.io/real-time-sports-odds",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build"
+     }
+   }
+   ```
+
+3. **Deploy**:
+   ```bash
+   npm run deploy
+   ```
 
 ## 🔍 Troubleshooting
 
