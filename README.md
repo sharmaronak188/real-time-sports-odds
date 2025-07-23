@@ -1,5 +1,7 @@
 # Real-Time Sports Odds
 
+🌐 **Live Demo**: <a href="https://radiant-sunshine-30b5bc.netlify.app/" target="_blank">https://radiant-sunshine-30b5bc.netlify.app/</a>
+
 A modern React application for displaying real-time sports betting odds with a mobile-first design. The app features a clean, responsive interface for viewing football matches, odds, and betting information.
 
 ## 🚀 Features
