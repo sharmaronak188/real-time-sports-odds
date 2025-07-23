@@ -7,7 +7,7 @@ A modern React application for displaying real-time sports betting odds with a m
 ## 🚀 Features
 
 - **Real-time Sports Data**: Displays live sports events and betting odds
-- **Mobile-First Design**: Optimized for mobile devices with responsive layout
+- **Mobile-First Design**: Optimized for mobile devices with a responsive layout
 - **Modern UI**: Clean interface with Tailwind CSS styling
 - **Redux State Management**: Efficient state management with Redux Toolkit
 - **Font Awesome Icons**: Professional icons for navigation and UI elements
